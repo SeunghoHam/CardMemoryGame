@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
     {
         GetButtons();
         AddListeners();
-        AddGamePuzzles();
+        AddGamePuzzles(); 
     }
 
     void GetButtons()
