@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
     {
         GetButtons();
         AddListeners();
+        AddGamePuzzles();
     }
 
     void GetButtons()
@@ -37,7 +38,18 @@ public class GameController : MonoBehaviour
 
     void AddGamePuzzles() // 리스트로 선언된 gamePuzzles 를 이용해서 스프라이트 중   펼쳐진 카드갯수/2 개의 짝을 찾아오기 위한 함수
     {
+        int looper = buttons.Count;
+        int index = 0;
 
+        for(int i =0; i< looper; i++)
+        {
+            if(index == looper / 2)
+            {
+                index = 0;
+            }
+            gamePuzzles.Add(puzzles[index]);
+            index++;
+        }
     }
     void AddListeners() // AddListener 매서드를 사용하기 위한 함수
     {
